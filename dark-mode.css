@@ -1,0 +1,172 @@
+/* Dark mode colors */
+body.dark-mode {
+    --text-color: #f0f0f0;
+    --bg-color: #121212;
+    --dark-color: #1e1e1e;
+    --light-color: #2d2d2d;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .language-switcher {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .theme-toggle .fa-moon {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .fa-sun {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .fa-sun {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+body.dark-mode .theme-toggle .fa-moon {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+}
+
+body.dark-mode .navbar-links {
+    background-color: var(--dark-color);
+}
+
+body.dark-mode .fast-job-card {
+    background-color: var(--dark-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Compatibility for New Elements */
+body.dark-mode .faq-item {
+    background-color: var(--card-bg);
+}
+
+body.dark-mode .faq-item.active .faq-question {
+    background-color: rgba(108, 99, 255, 0.1);
+}
+
+body.dark-mode .skill-popup {
+    background-color: var(--dark-color);
+}
+
+body.dark-mode .popup-feature {
+    background-color: rgba(108, 99, 255, 0.2);
+}
+
+/* Dark Mode Compatibility for Pricing */
+body.dark-mode .pricing-card {
+    background-color: var(--dark-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .pricing-accordion,
+body.dark-mode .pricing-info {
+    background-color: var(--dark-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .pricing-table th {
+    background-color: rgba(108, 99, 255, 0.1);
+}
+
+body.dark-mode .pricing-table td,
+body.dark-mode .pricing-table th {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dark Mode for Skills Section */
+body.dark-mode .skill-item {
+    background-color: var(--dark-color);
+}
+
+body.dark-mode .skill-bar {
+    background-color: #2a2a2a;
+}
+
+/* Dark Mode for Services Section */
+body.dark-mode .service-item {
+    background-color: var(--dark-color);
+}
+
+/* Dark Mode for Contact Section */
+body.dark-mode .contact-card {
+    background-color: var(--dark-color);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #2a2a2a;
+    border-color: #3a3a3a;
+    color: var(--text-color);
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark Mode for Scroll Indicator */
+body.dark-mode .scroll-indicator {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark Mode for Section Reveal Animation */
+body.dark-mode .section-reveal {
+    background-color: var(--bg-color);
+}
+
+/* Dark Mode for Mobile Menu */
+body.dark-mode .mobile-menu-btn {
+    color: var(--text-color);
+}
+
+/* Dark Mode for Scroll to Top Button */
+body.dark-mode .scroll-to-top {
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode for Header */
+body.dark-mode header::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .header-content {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode for Footer */
+body.dark-mode footer {
+    background-color: var(--dark-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .footer-social a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode .footer-social a:hover {
+    color: var(--primary-color);
+}
+
+/* Dark Mode for Buttons */
+body.dark-mode .btn {
+    background-color: var(--primary-color);
+}
+
+body.dark-mode .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Dark Mode for Popup Overlay */
+body.dark-mode .skill-popup-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}

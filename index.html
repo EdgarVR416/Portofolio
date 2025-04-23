@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexKid Studio - Young Web Developer</title>
+    <!-- Replace single CSS file with multiple CSS files -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark mode toggle -->
+    <div class="theme-toggle">
+        <button id="theme-btn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <!-- Navigation Bar with Language Toggle -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <i class="fas fa-code"></i>
+                <span>NexKid</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links" id="navbar-links">
+                <a href="#about" data-en="About" data-es="Acerca de">About</a>
+                <a href="#skills" data-en="Skills" data-es="Habilidades">Skills</a>
+                <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+                <a href="#fast-job" data-en="Fast Job" data-es="Trabajo Rápido">Fast Job</a>
+                <a href="#pricing" data-en="Pricing" data-es="Precios">Pricing</a>
+                <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+                <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                
+                <!-- Language switcher moved to navbar -->
+                <div class="language-switcher">
+                    <button id="en-btn" class="active">EN</button>
+                    <button id="es-btn">ES</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1 class="title">NexKid Studio</h1>
+            <p class="subtitle" data-en="Young Web Developer from Cirebon" data-id="Web Developer Muda dari Cirebon">Young Web Developer from Cirebon</p>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" id="scroll-down">
+            <span data-en="Scroll Down" data-id="Gulir ke Bawah">Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About section with animation -->
+    <section id="about" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="About Me" data-id="Tentang Saya">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <p data-en="Hi! I’m the founder of NexKid Studio, a young web developer passionate about creating modern websites and turning ideas into reality. I’ve already worked on real projects and learn every day. I love design, coding, and building cool digital experiences. For me, age doesn't define creativity or skill. From clean landing pages to custom web projects, I’m ready to help bring your ideas to life. Let’s build something epic together!" 
+               data-id="Halo! Aku adalah pendiri NexKid Studio, seorang web developer muda yang punya semangat besar buat mewujudkan ide-ide lewat website yang modern dan bersih. Walaupun aku masih 12 tahun, aku udah mulai ngerjain proyek nyata, terus belajar, dan makin dekat dengan mimpi jadi kreator digital. Aku suka desain, ngoding, dan bikin pengalaman digital yang keren. Buatku, umur bukan batasan buat berkarya. Dari landing page sederhana sampai proyek website custom, aku siap bantu wujudin ide-ide keren kamu ke dunia online. Yuk bikin sesuatu yang luar biasa bareng-bareng!">
+               Hi! I’m the founder of NexKid Studio, a young web developer passionate about creating modern websites and turning ideas into reality. I’ve already worked on real projects and learn every day. I love design, coding, and building cool digital experiences. For me, age doesn't define creativity or skill. From clean landing pages to custom web projects, I’m ready to help bring your ideas to life. Let’s build something epic together!
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills section with animation -->
+    <section id="skills" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="My Skills" data-id="Keahlian Saya">My Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90%"></div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <button class="learn-more-btn" data-skill="html">Learn More</button>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="85%"></div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <button class="learn-more-btn" data-skill="css">Learn More</button>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75%"></div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <button class="learn-more-btn" data-skill="javascript">Learn More</button>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="65%"></div>
+                        <span class="skill-percentage">65%</span>
+                    </div>
+                    <button class="learn-more-btn" data-skill="react">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill Popup Panels -->
+    <div class="skill-popup-overlay" id="skillPopupOverlay">
+        <div class="skill-popup" id="htmlPopup">
+            <div class="popup-header">
+                <h3><i class="fab fa-html5"></i> HTML5</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <p>HTML5 is the latest version of the Hypertext Markup Language, the code that describes web pages. It's the standard markup language for creating web pages and web applications.</p>
+                <p>With HTML5, I can structure your content in a semantic way, making it more accessible and SEO-friendly. It allows for better multimedia integration without plugins.</p>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-universal-access"></i>
+                        <span>Accessibility</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-search"></i>
+                        <span>SEO Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-popup" id="cssPopup">
+            <div class="popup-header">
+                <h3><i class="fab fa-css3-alt"></i> CSS3</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <p>CSS3 (Cascading Style Sheets) is the language that styles web content. It controls layout, colors, fonts, animations, and more.</p>
+                <p>I use CSS3 to create beautiful, responsive designs that work across all devices. With features like flexbox, grid, and animations, I can bring your website to life with smooth transitions and effects.</p>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Styling</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-th"></i>
+                        <span>Grid & Flexbox</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-film"></i>
+                        <span>Animations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-popup" id="javascriptPopup">
+            <div class="popup-header">
+                <h3><i class="fab fa-js"></i> JavaScript</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <p>JavaScript is the programming language of the web that makes pages interactive. It allows for dynamic content updates, user interface enhancements, and much more.</p>
+                <p>I use JavaScript to create interactive elements, validate forms, handle user events, and build dynamic features that engage visitors and improve user experience.</p>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-cogs"></i>
+                        <span>Interactivity</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-server"></i>
+                        <span>API Integration</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Dynamic Content</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-popup" id="reactPopup">
+            <div class="popup-header">
+                <h3><i class="fab fa-react"></i> React</h3>
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content">
+                <p>React is a JavaScript library for building user interfaces, particularly single-page applications. It's maintained by Facebook and a community of developers.</p>
+                <p>With React, I can build fast, scalable web applications with reusable components. It's perfect for complex, data-driven websites that need to be highly responsive and interactive.</p>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-cubes"></i>
+                        <span>Component-Based</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>High Performance</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Virtual DOM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services section with animation -->
+    <section id="services" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Services" data-id="Layanan">Services</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="services-container">
+                <div class="service-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 data-en="Web Development" data-id="Pengembangan Web">Web Development</h3>
+                    <p data-en="Custom websites built with the latest technologies" data-id="Website kustom dibangun dengan teknologi terbaru">Custom websites built with the latest technologies</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 data-en="Responsive Design" data-id="Desain Responsif">Responsive Design</h3>
+                    <p data-en="Websites that look great on all devices" data-id="Website yang terlihat bagus di semua perangkat">Websites that look great on all devices</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-search"></i>
+                    <h3 data-en="SEO Optimization" data-id="Optimasi SEO">SEO Optimization</h3>
+                    <p data-en="Improve your site's visibility on search engines" data-id="Tingkatkan visibilitas situs Anda di mesin pencari">Improve your site's visibility on search engines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Fast Job section -->
+    <section id="fast-job" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Fast Job" data-id="Pekerjaan Cepat">Fast Job</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="fast-job-container">
+                <div class="fast-job-card">
+                    <div class="fast-job-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="fast-job-content">
+                        <h3 data-en="Quick Turnaround" data-id="Pengerjaan Cepat">Quick Turnaround</h3>
+                        <p data-en="Get your website in as little as 48 hours" data-id="Dapatkan website Anda dalam waktu secepat 48 jam">Get your website in as little as 48 hours</p>
+                        <a href="#contact" class="fast-job-btn" data-en="Order Now" data-id="Pesan Sekarang">Order Now</a>
+                    </div>
+                </div>
+                <div class="fast-job-card">
+                    <div class="fast-job-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="fast-job-content">
+                        <h3 data-en="Express Revisions" data-id="Revisi Ekspres">Express Revisions</h3>
+                        <p data-en="Quick updates to your existing website" data-id="Pembaruan cepat untuk website Anda yang sudah ada">Quick updates to your existing website</p>
+                        <a href="#contact" class="fast-job-btn" data-en="Get Started" data-id="Mulai Sekarang">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="FAQ" data-id="Pertanyaan Umum">FAQ</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="How long does it take to complete a website?" data-id="Berapa lama waktu yang dibutuhkan untuk menyelesaikan website?">How long does it take to complete a website?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Typically, a simple website takes 1-2 weeks, while more complex projects may take 3-4 weeks. For urgent needs, check out my Fast Job service for delivery in as little as 48 hours." 
+                           data-id="Biasanya, website sederhana membutuhkan waktu 1-2 minggu, sedangkan proyek yang lebih kompleks mungkin membutuhkan 3-4 minggu. Untuk kebutuhan mendesak, lihat layanan Fast Job saya untuk pengiriman secepat 48 jam.">Typically, a simple website takes 1-2 weeks, while more complex projects may take 3-4 weeks. For urgent needs, check out my Fast Job service for delivery in as little as 48 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="What is your pricing structure?" data-id="Bagaimana struktur harga Anda?">What is your pricing structure?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="My pricing depends on project complexity, features needed, and timeline. I offer packages starting from $200 for basic landing pages. Contact me for a personalized quote." 
+                           data-id="Harga saya tergantung pada kompleksitas proyek, fitur yang dibutuhkan, dan timeline. Saya menawarkan paket mulai dari Rp3 juta untuk landing page dasar. Hubungi saya untuk penawaran yang dipersonalisasi.">My pricing depends on project complexity, features needed, and timeline. I offer packages starting from $200 for basic landing pages. Contact me for a personalized quote.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="Do you offer website maintenance?" data-id="Apakah Anda menawarkan pemeliharaan website?">Do you offer website maintenance?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, I offer monthly maintenance packages to keep your website secure, updated, and running smoothly. This includes regular updates, backups, and minor content changes." 
+                           data-id="Ya, saya menawarkan paket pemeliharaan bulanan untuk menjaga website Anda tetap aman, diperbarui, dan berjalan lancar. Ini termasuk pembaruan rutin, backup, dan perubahan konten kecil.">Yes, I offer monthly maintenance packages to keep your website secure, updated, and running smoothly. This includes regular updates, backups, and minor content changes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="Can you help with existing websites?" data-id="Bisakah Anda membantu dengan website yang sudah ada?">Can you help with existing websites?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Absolutely! I can help improve, update, or fix issues with your existing website. I offer services for redesigns, performance optimization, and adding new features." 
+                           data-id="Tentu saja! Saya dapat membantu meningkatkan, memperbarui, atau memperbaiki masalah dengan website Anda yang sudah ada. Saya menawarkan layanan untuk redesign, optimasi kinerja, dan menambahkan fitur baru.">Absolutely! I can help improve, update, or fix issues with your existing website. I offer services for redesigns, performance optimization, and adding new features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section with animation -->
+    <section id="contact" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Contact" data-id="Kontak">Contact</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p data-en="Phone" data-id="Telepon">Phone</p>
+                        <p class="contact-detail">0856 4232 7848</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>Email</p>
+                        <p class="contact-detail">edgar.vidysto@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p data-en="Location" data-id="Lokasi">Location</p>
+                        <p class="contact-detail" data-en="Cirebon, West Java, Indonesia" data-id="Cirebon, Jawa Barat, Indonesia">Cirebon, West Java, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Pricing" data-id="Harga">Pricing</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="pricing-intro">
+                <h3 data-en="NexKid Studio — Web Development Price List" data-id="NexKid Studio — Daftar Harga Pengembangan Web">NexKid Studio — Web Development Price List</h3>
+                <h4 data-en="Why NexKid Studio?" data-id="Mengapa NexKid Studio?">Why NexKid Studio?</h4>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <p data-en="Experience and Commitment: Handled directly by young developers with extreme enthusiasm to deliver the best outcome." 
+                           data-id="Pengalaman dan Komitmen: Ditangani langsung oleh pengembang muda dengan antusiasme ekstrem untuk memberikan hasil terbaik.">Experience and Commitment: Handled directly by young developers with extreme enthusiasm to deliver the best outcome.</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <p data-en="Professional Design: Modern and responsive websites, as per the current trends." 
+                           data-id="Desain Profesional: Website modern dan responsif, sesuai dengan tren saat ini.">Professional Design: Modern and responsive websites, as per the current trends.</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-cogs"></i>
+                        <p data-en="Customization Based on Requirements: Receive a website that meets your brand and requirements." 
+                           data-id="Kustomisasi Berdasarkan Kebutuhan: Dapatkan website yang memenuhi merek dan kebutuhan Anda.">Customization Based on Requirements: Receive a website that meets your brand and requirements.</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <p data-en="Speed Optimization: All websites are designed light and fast to view on different devices." 
+                           data-id="Optimasi Kecepatan: Semua website dirancang ringan dan cepat untuk dilihat di berbagai perangkat.">Speed Optimization: All websites are designed light and fast to view on different devices.</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-clock"></i>
+                        <p data-en="On-Time Projects: We give priority to satisfaction and always complete projects on the agreed timeline." 
+                           data-id="Proyek Tepat Waktu: Kami mengutamakan kepuasan dan selalu menyelesaikan proyek sesuai timeline yang disepakati.">On-Time Projects: We give priority to satisfaction and always complete projects on the agreed timeline.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="pricing-section-title" data-en="Website Service Packages" data-id="Paket Layanan Website">Website Service Packages</h3>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 data-en="Starter" data-es="Inicial">Starter</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$5</span>
+                            <span class="price-currency">/ €4.50</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features-list">
+                            <li data-en="1 page (Landing Page)" data-es="1 página (Landing Page)">1 page (Landing Page)</li>
+                            <li data-en="Responsive design for desktop and mobile" data-es="Diseño responsivo para escritorio y móvil">Responsive design for desktop and mobile</li>
+                            <li data-en="Simple and clean page layout" data-es="Diseño de página simple y limpio">Simple and clean page layout</li>
+                            <li data-en="Basic SEO settings" data-es="Configuración básica de SEO">Basic SEO settings</li>
+                            <li data-en="Ready to be published in GitHub Pages" data-es="Listo para ser publicado en GitHub Pages">Ready to be published in GitHub Pages</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#contact" class="pricing-btn" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card highlighted">
+                    <div class="pricing-card-badge" data-en="Popular" data-es="Popular">Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 data-en="Pro" data-es="Pro">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$15</span>
+                            <span class="price-currency">/ €13.50</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features-list">
+                            <li data-en="3 pages (Landing Page, About, Contact)" data-es="3 páginas (Landing Page, Acerca de, Contacto)">3 pages (Landing Page, About, Contact)</li>
+                            <li data-en="Custom design with cool animation" data-es="Diseño personalizado con animaciones geniales">Custom design with cool animation</li>
+                            <li data-en="Working contact form" data-es="Formulario de contacto funcional">Working contact form</li>
+                            <li data-en="Speed and performance optimization" data-es="Optimización de velocidad y rendimiento">Speed and performance optimization</li>
+                            <li data-en="Design suitable for personal website, portfolio, or UMKM" data-es="Diseño adecuado para sitio web personal, portafolio o pequeña empresa">Design suitable for personal website, portfolio, or UMKM</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#contact" class="pricing-btn primary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 data-en="Ultimate" data-es="Ultimate">Ultimate</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$25+</span>
+                            <span class="price-currency">/ €22.50+</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-features-list">
+                            <li data-en="Up to 5 pages (or more if necessary)" data-es="Hasta 5 páginas (o más si es necesario)">Up to 5 pages (or more if necessary)</li>
+                            <li data-en="Interactive and professional layout" data-es="Diseño interactivo y profesional">Interactive and professional layout</li>
+                            <li data-en="Integration with Google Maps / business location" data-es="Integración con Google Maps / ubicación del negocio">Integration with Google Maps / business location</li>
+                            <li data-en="Customize color and elements according to brand" data-es="Personalización de colores y elementos según la marca">Customize color and elements according to brand</li>
+                            <li data-en="Forms and testimonials" data-es="Formularios y testimonios">Forms and testimonials</li>
+                            <li data-en="Full SEO optimization" data-es="Optimización SEO completa">Full SEO optimization</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <a href="#contact" class="pricing-btn" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-additional">
+                <div class="pricing-accordion">
+                    <div class="pricing-accordion-header" id="additional-services-toggle">
+                        <h3 data-en="Additional Services" data-id="Layanan Tambahan">Additional Services</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="pricing-accordion-content" id="additional-services-list">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th data-en="Additional Services" data-id="Layanan Tambahan">Additional Services</th>
+                                    <th data-en="Price" data-id="Harga">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-en="Add 1 new page" data-es="Agregar 1 página nueva">Add 1 new page</td>
+                                    <td>$3 / €2.70</td>
+                                </tr>
+                                <tr>
+                                    <td data-en="Setup Google Maps on website" data-es="Configurar Google Maps en el sitio web">Setup Google Maps on website</td>
+                                    <td>$1.50 / €1.35</td>
+                                </tr>
+                                <tr>
+                                    <td data-en="Hosting to Netlify or custom domain" data-es="Alojamiento en Netlify o dominio personalizado">Hosting to Netlify or custom domain</td>
+                                    <td>$2.50 / €2.25</td>
+                                </tr>
+                                <tr>
+                                    <td data-en="Help purchase a.my.id domain" data-es="Ayuda para comprar dominio a.my.id">Help purchase a.my.id domain</td>
+                                    <td>$2 / €1.80 (domain fees not included)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="pricing-accordion">
+                    <div class="pricing-accordion-header" id="special-packages-toggle">
+                        <h3 data-en="Special Packages" data-id="Paket Khusus">Special Packages</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="pricing-accordion-content" id="special-packages-list">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th data-en="Packages Suitable for" data-id="Paket Cocok untuk">Packages Suitable for</th>
+                                    <th data-en="Prices" data-id="Harga">Prices</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-en="UMKM & Local Business Website for small shops or businesses (e.g. restaurants, cafes, or stores)" 
+                                        data-es="Sitio web para pequeñas empresas y negocios locales (ej. restaurantes, cafés o tiendas)">UMKM & Local Business Website for small shops or businesses (e.g. restaurants, cafes, or stores)</td>
+                                    <td>$10 / €9</td>
+                                </tr>
+                                <tr>
+                                    <td data-en="Portfolio Creator Personal website to display work or projects" 
+                                        data-es="Sitio web personal para mostrar trabajos o proyectos">Portfolio Creator Personal website to display work or projects</td>
+                                    <td>$12.50 / €11.25</td>
+                                </tr>
+                                <tr>
+                                    <td data-en="Roblox Tool Showcase Website to display UI tools or game assets" 
+                                        data-es="Sitio web para mostrar herramientas UI de Roblox o recursos de juegos">Roblox Tool Showcase Website to display UI tools or game assets</td>
+                                    <td>$15 / €13.50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="pricing-info">
+                    <h3 data-en="Other Information" data-id="Informasi Lainnya">Other Information</h3>
+                    <div class="pricing-info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p data-en="Process Time: Average 1-5 days, depending on the level of difficulty and number of pages ordered." 
+                           data-id="Waktu Proses: Rata-rata 1-5 hari, tergantung tingkat kesulitan dan jumlah halaman yang dipesan.">Process Time: Average 1-5 days, depending on the level of difficulty and number of pages ordered.</p>
+                    </div>
+                    <div class="pricing-info-item">
+                        <i class="fas fa-credit-card"></i>
+                        <p data-en="Payment: Can be paid via bank transfer or digital payment system." 
+                           data-id="Pembayaran: Dapat dibayar melalui transfer bank atau sistem pembayaran digital.">Payment: Can be paid via bank transfer or digital payment system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

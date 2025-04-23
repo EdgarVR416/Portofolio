@@ -1,0 +1,545 @@
+/* Animations and Interactive Elements */
+
+/* Navbar Animations */
+.navbar-logo i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover i {
+    transform: rotate(15deg);
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+.navbar-links a:hover {
+    color: var(--primary-color);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn:hover {
+    transform: rotate(90deg);
+}
+
+.language-switcher:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Animations - Background is now static */
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    /* Animation removed to make background static */
+}
+
+/* Scroll Indicator Animation */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.scroll-indicator span {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.scroll-indicator i {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Section Title Animation */
+.section-title:hover .title-underline {
+    width: 100px;
+}
+
+/* Section Reveal Animation */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Section Animations */
+#about::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    opacity: 0.1;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+    transition: transform 0.8s ease;
+}
+
+#about:hover::before {
+    transform: scale(1.2);
+}
+
+#about p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Skills Animations */
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(108, 99, 255, 0.05) 100%);
+    transition: height 0.5s ease;
+    z-index: -1;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item:hover::before {
+    height: 100%;
+}
+
+.skill-item i {
+    transition: transform 0.5s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2);
+}
+
+.skill-item:hover h3 {
+    transform: translateY(-5px);
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-percentage {
+    opacity: 1;
+}
+
+/* Services Animations */
+.service-item::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    opacity: 0;
+    top: -25%;
+    left: -25%;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    transform: scale(0);
+}
+
+.service-item:hover {
+    transform: translateY(-10px) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-item:hover::after {
+    opacity: 0.05;
+    transform: scale(1);
+}
+
+.service-item i {
+    transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.service-item:hover i {
+    transform: scale(1.2) rotateY(360deg);
+}
+
+.service-item h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.service-item:hover h3::after {
+    width: 100%;
+}
+
+/* Fast Job Section Animations */
+.fast-job-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fast-job-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(108, 99, 255, 0.02) 100%);
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.fast-job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fast-job-card:hover::before {
+    transform: translateY(0);
+}
+
+.fast-job-icon {
+    transition: transform 0.5s ease;
+}
+
+.fast-job-card:hover .fast-job-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.fast-job-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fast-job-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.fast-job-btn:hover::before {
+    left: 0;
+}
+
+/* Contact Card Animations */
+.contact-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-card:hover .contact-icon {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotate(360deg);
+}
+
+.contact-detail {
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-detail {
+    transform: scale(1.05);
+    color: var(--primary-color);
+}
+
+/* Dark Mode Compatibility */
+body.dark-mode #about p:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .skill-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .service-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .fast-job-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* FAQ Animations */
+.faq-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question h3 {
+    transition: color 0.3s ease;
+}
+
+.faq-icon i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover .faq-icon i {
+    transform: rotate(90deg);
+}
+
+.faq-item.active .faq-icon i {
+    transform: rotate(180deg);
+}
+
+/* Enhanced Theme Toggle Animation */
+.theme-toggle button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    transform: translateY(-3px) rotate(15deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .theme-toggle button {
+    background-color: #4f46e5;
+}
+
+/* Skill Learn More Button Animation */
+.learn-more-btn {
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-item:hover .learn-more-btn {
+    animation: pulseButton 1.5s infinite;
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Skill Popup Animations */
+.skill-popup {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.skill-popup.active {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.popup-feature {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.popup-feature:hover {
+    transform: translateY(-3px);
+    background-color: rgba(108, 99, 255, 0.2);
+}
+
+.popup-header h3 i {
+    animation: spinIcon 5s infinite linear;
+    animation-play-state: paused;
+}
+
+.popup-header:hover h3 i {
+    animation-play-state: running;
+}
+
+@keyframes spinIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pricing Section Animations */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.highlighted:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-feature i {
+    transition: transform 0.3s ease;
+}
+
+.pricing-feature:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.pricing-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pricing-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.pricing-btn:hover::before {
+    left: 0;
+}
+
+.pricing-btn.primary::before {
+    background-color: var(--secondary-color);
+}
+
+.pricing-accordion-header:hover i {
+    transform: rotate(90deg);
+}
+
+.pricing-accordion-header i.fa-minus {
+    transform: rotate(180deg);
+}
+
+.pricing-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.pricing-table tr:hover {
+    background-color: rgba(108, 99, 255, 0.05);
+}
+
+.pricing-info-item i {
+    transition: transform 0.3s ease;
+}
+
+.pricing-info-item:hover i {
+    transform: scale(1.2) rotate(15deg);
+}
+
+/* Dark Mode Compatibility */
+body.dark-mode .pricing-table tr:hover {
+    background-color: rgba(108, 99, 255, 0.1);
+}
